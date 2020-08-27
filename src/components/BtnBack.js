@@ -1,8 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
-export const BtnBack = () => (
+const BtnBack = () => {
 
-<Link className="page btn btn-sm btn-info" id="btn-volver" to='/'> <i className="fa fa-arrow-left"></i></Link>
+    const history = useHistory()
     
+function handleBack() {
+    history.goBack()
+}
+
+return(
+    <button className="page btn btn-sm btn-info" id="btn-volver" onClick={handleBack}> <i className="fa fa-arrow-left"></i></button>
 )
+    
+}
+
+export default BtnBack

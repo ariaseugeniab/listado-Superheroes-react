@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { BtnBack } from "../components/BtnBack";
-import ShDetails from "../components/ShDetails";
-import Cover from "../components/Cover";
-import NavBar from '../components/NavBar';
+import BtnBack from "../../components/BtnBack";
+import ShDetails from "../../components/ShDetails";
+import NavBar from '../../components/NavBar';
 // import getDetails from '../services/getDetails'
 
 const API_KEY =
@@ -46,7 +45,6 @@ const Detail = (props) => {
 
   return (  
     <div>
-      <Cover />
       <NavBar title="Detalles"  onSearch={false} resultAction={null}/>
       {/* <ObtenerSh onResults={_handleResults} title="Detalles del Superhéroe" onsearch={false}/> */}
       <div id="contenedor" className="card mb-3">
