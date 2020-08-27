@@ -1,21 +1,15 @@
 //using npm or yarn
 import React from 'react'
-import { Circle, Heart } from 'react-spinners-css';
-//using bit
-import Facebook from '@bit/joshk.react-spinners-css.facebook';
-import { getRandomColor } from '@bit/joshk.jotils.get-random-color'
+import { Spinner } from 'react-spinners-css';
+// //using bit
+// import Facebook from '@bit/joshk.react-spinners-css.facebook';
+// import { getRandomColor } from '@bit/joshk.jotils.get-random-color'
 
-const Spinner = () =>{
+const LoadSpinner = () =>{
    return(
-     <div>
-       <Circle /> 
-       <Circle color="red" />
-       <Circle color="#be97e8" size={200} />
-       <Heart color={getRandomColor()} />
-       <Facebook /> 
-       <Facebook color="red" />
-     </div>
+       <Spinner color="#9f7e39" size={500}  />
+
    )
 }
 
-export default Spinner
+export default LoadSpinner

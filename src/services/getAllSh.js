@@ -3,15 +3,15 @@ const API_KEY = '&apikey=bc7fe627f7908e7c510adbbd29eebe78&hash=184dae0b39058edc2
 const URL = 'https://gateway.marvel.com:443/v1/public/characters?orderBy=name&ts=1'
 
 
-const getAllSh = ({nroPagina, filasPagina}) => {
+const getAllSh = (nroPagina, filasPagina) => {
 
-    // let offset = 0
+    let offset = 0
 
-    // if(nroPagina > 1){
-    //     offset = (nroPagina + 1) * filasPagina
-    // }
+    if(nroPagina > 1){
+        offset = (nroPagina + 1) * filasPagina
+    }
 
-    const urlApi = URL + API_KEY +`&limit=${20}&offset=${1}`
+    const urlApi = URL + API_KEY +`&limit=${filasPagina}&offset=${offset}`
 
     console.log(urlApi)
     return fetch(urlApi)

@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import getAllSh from '../services/getAllSh'
 
-const useShList = ({nroPag, filasPag})=> {
+const useShList = (nroPag, filasPag)=> {
 
     const [loading, setloading] = useState(false)
     const [results, setResults] = useState([]);
@@ -9,7 +9,7 @@ const useShList = ({nroPag, filasPag})=> {
 
       useEffect(() => {
         setloading(true)
-        getAllSh(20,1)
+        getAllSh(nroPag,filasPag)
         .then(shResults =>{
           setResults(shResults)
           setloading(false)
