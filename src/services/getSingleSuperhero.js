@@ -7,10 +7,8 @@ const URL = 'https://gateway.marvel.com:443/v1/public/characters?orderBy=name&ts
 
 const getSingleSh = ({onResults}) => {
 
-    //navigation: { setParams } 
     const [ inputSh, setInputSh ] = useState('')
     const history = useHistory()
-    // const [loading, setLoading] = useState(false)
 
     function _handleChange(e) {
         setInputSh(e.target.value)
@@ -32,9 +30,6 @@ const getSingleSh = ({onResults}) => {
         document.getElementById("buscador-input").value = ''
         history.push(`/search/${inputSh}`)
     }
-
-    // if(loading) return <p>Cargando!</p>}
-
 
     return (
         <Search handleSubmit={_searchName} handleChange={_handleChange} name={inputSh} />

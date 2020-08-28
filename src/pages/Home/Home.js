@@ -14,18 +14,20 @@ const Home = () => {
   const {loading, results} = useShList(page, rows)
 
   function handleClick(e){
-    // if (e.target.value !== Number){
-    //   setpage(72)
-    // } else {
-      
-    //   setpage(parseInt(e.target.innerHTML))
-    // }
     setPage(parseInt(e.target.innerHTML))
     if(isNaN(e.target.innerHTML)){
       setPage(72)
     }
 
-    console.log(e.target, page)
+    console.log(e.target.value, page)
+  }
+
+  function _goFirst(e){
+    setPage(1)
+  }
+
+  function _goEnd(e){
+    setPage(72)
   }
 
   return (
@@ -42,7 +44,7 @@ const Home = () => {
         </div>
       </main>
 
-      <PaginationSh active={page} onEvent={handleClick}/>
+      <PaginationSh active={page} onEvent={handleClick} goFirst={_goFirst} goEnd={_goEnd}/>
     </div>
   );
 };

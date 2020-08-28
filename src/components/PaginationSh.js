@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import { Pagination } from 'react-bootstrap';
 import useShList from '../hooks/useShList'
-// import PageBtn from './PageBtn'
+import PageBtn from './PageBtn'
 
-const PaginationSh = ({active, onEvent}) =>{
+const PaginationSh = ({active, onEvent, goFirst, goEnd}) =>{
 
   let totalBtns = 10
   
@@ -16,9 +16,6 @@ const PaginationSh = ({active, onEvent}) =>{
   let items = []
   let totalPages = Math.ceil(total / rows)
   
-  
-  // console.log('valors antes', maxLeft, maxRight)
-
   if(maxLeft < 1){
     setMaxLeft(1)
     setMaxRight(totalBtns)
@@ -33,7 +30,6 @@ const PaginationSh = ({active, onEvent}) =>{
     }
   }
   
-  // console.log(maxLeft, maxRight, total)
     for (let number = maxLeft; number <= totalBtns; number++) {
         items.push(
           <Pagination.Item key={number} value={number} active={number === active} onClick={onEvent}>
@@ -47,14 +43,17 @@ const PaginationSh = ({active, onEvent}) =>{
         <Pagination>
           {page !== 1
           ? 
-          <Pagination.First onClick={onEvent} value={1} />
+          // <PageBtn pageNumber={1} angle="left" />
+          <Pagination.First onClick={goFirst} value={1} />
           : <></>
         }
         
           {items}
 
           { page !== totalPages 
-          ? <Pagination.Last onClick={onEvent} value={totalPages}/>
+          ? 
+          // <PageBtn pageNumber={totalPages} angle="right" />
+          <Pagination.Last onClick={goEnd} value={totalPages}/>
           : <></>
           }
         </Pagination>
