@@ -228,14 +228,25 @@ div.card-body a {
 /* superheroe info */
 
 
-#paginacion button {
+#paginacion li a {
 	background-color: #b69f41;
-	border: 2px solid #b69f41
+	border: 2px solid #b69f41;
+	color: #ffffff
 }
 
-#paginacion button:hover {
+#paginacion a:hover {
 	background-color: #9f7e39;
 	border: 2px solid #9f7e39
+}
+/* .sr-only{
+	background-color: #9f7e39;
+} */
+
+.page-item.active .page-link {
+	background-color: #9f7e39;
+	border-color: #9f7e39;
+	padding: .6rem .76rem;
+
 }
 
 #paginacion {
@@ -244,14 +255,14 @@ div.card-body a {
 	margin: auto;
 }
 
-#paginacion button{
+#paginacion li{
 	text-align: center;
 }
 
-button .seleccionado {
+/* button .seleccionado {
 	background-color: #9f7e39;
 	border: 2px solid #9f7e39
-}
+} */
 
 #container-info .card-title{
 	border-bottom: 3px solid #b69f41;

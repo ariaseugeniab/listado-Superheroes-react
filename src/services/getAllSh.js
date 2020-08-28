@@ -13,13 +13,13 @@ const getAllSh = (nroPagina, filasPagina) => {
 
     const urlApi = URL + API_KEY +`&limit=${filasPagina}&offset=${offset}`
 
-    console.log(urlApi)
+    // console.log(urlApi)
     return fetch(urlApi)
     .then(res=>res.json())
     .then(res =>{
         const { results = [], total = "0" } = res.data
-        console.log(results, total)
-        return results
+        // console.log(results, total)
+        return {results, total}
     })
 
 }

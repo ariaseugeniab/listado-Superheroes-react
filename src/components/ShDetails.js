@@ -26,7 +26,7 @@ const ShDetails = ({ name, description, poster, links = [] }) => {
                   <h4>Links</h4>
                   {links.map((el) => {
                     return (
-                      <a key={el.type} href={el.url} className="links-sh">
+                      <a key={el.type} href={el.url} target="_blank" rel="noopener noreferrer" className="links-sh">
                         {el.type}
                       </a>
                     );
