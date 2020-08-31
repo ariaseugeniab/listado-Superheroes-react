@@ -241,7 +241,8 @@ div.card-body a {
 #paginacion li a {
 	background-color: #b69f41;
 	border: 2px solid #b69f41;
-	color: #ffffff
+	color: #ffffff;
+	margin: 0.5px;
 }
 
 #paginacion a:hover {
