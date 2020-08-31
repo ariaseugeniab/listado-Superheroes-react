@@ -1,11 +1,14 @@
 import React, {useState} from 'react'
 import { Pagination } from 'react-bootstrap';
 import useShList from '../hooks/useShList'
-import PageBtn from './PageBtn'
+// import PaginationContext from '../contexts/PaginationContext'
+// import PageBtn from './PageBtn'
 
 const PaginationSh = ({active, onEvent, goFirst, goEnd}) =>{
 
   let totalBtns = 10
+
+  // const {currentPage} = useContext(PaginationContext)
   
   const[page, setpage] = useState(1)
   const[rows, setRows] = useState(21)
