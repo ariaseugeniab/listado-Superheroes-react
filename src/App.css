@@ -130,15 +130,25 @@ h2 {
 }
 
 /* funcionalidad favoritos*/
-/* #star{
-	color:grey
+.star{
+	color:grey;
+	padding: 5px;
+	margin-left: 15px;
+	font-size: 75%;
+	/* width: 150%; */
 }
 
-#star:hover{
+.star:hover{
+	background-color:#9f7e39;
+	color: #ffffff;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.selected {
 	color:#9f7e39
 }
-
-#star:click{
+/* .star:click{
 	color:#b69f41;
 } */
 

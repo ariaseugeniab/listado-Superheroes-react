@@ -11,7 +11,8 @@ const Superhero = ({id, title, poster}) => {
               className="card-img-top"
             />
         <div className="card-body">
-                <h5 className="card-title">{title}</h5>
+                <h5 className="card-title">{title} <i className="fa fa-star star" ></i></h5>
+        
           </div>
       </Link>
     );

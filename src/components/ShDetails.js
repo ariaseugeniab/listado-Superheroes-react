@@ -1,6 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 
 const ShDetails = ({ name, description, poster, links = [] }) => {
+
+  const [selected, setSelected] = useState(false)
+
+  function addFavourite(e){
+    setSelected(!selected)
+    if(selected){
+      e.target.className += " selected"
+    } else {
+      e.target.className = "fa fa-star star"
+    }
+   
+  }
+
   return (
     <div id="container-info" className="row no-gutters">
       <div id="imagen-sh" className="col-md-4">
@@ -8,7 +21,7 @@ const ShDetails = ({ name, description, poster, links = [] }) => {
       </div>
       <div className="col-md-8">
         <div className="card-body">
-          <h2 className="card-title">{name}</h2>
+          <h2 className="card-title">{name} <span  onClick={addFavourite}> <i className="fa fa-star star"></i></span></h2>
           <div className="card-text">
             {description ? (
               <>
